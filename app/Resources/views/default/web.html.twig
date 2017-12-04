@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="domain-wrapper">DOMAIN: {{ domain.url }}</div>
+    <div class="domain-wrapper">DESCRIPTION: {{ domain.description }}</div>
+    <div class="domain-wrapper">IMAGE:<img src="{{ domain.image }}"> </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

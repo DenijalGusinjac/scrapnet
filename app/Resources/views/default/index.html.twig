@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Domain</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for domain in domains %}
+        <tr>
+            <td>{{  loop.index	 }}</td>
+            <td><a href="/web/{{ domain.id }}">{{ domain.url }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(domains) }}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
